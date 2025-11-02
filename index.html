@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "./texts.js": "./texts.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed & Accuracy Test</h1>
+        
+        <div id="text-display" class="text-display">
+            <!-- Text content will be rendered here -->
+            <p>Loading text...</p>
+        </div>
+        
+        <textarea id="typing-input" class="typing-input" placeholder="Start typing here when the text appears..." autofocus disabled></textarea>
+        
+        <div id="stats" class="stats">
+            <div class="stat-item">
+                <span class="stat-label">WPM:</span>
+                <span id="wpm-value" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Errors:</span>
+                <span id="error-value" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Time:</span>
+                <span id="time-value" class="stat-value">0s</span>
+            </div>
+        </div>
+        
+        <button id="restart-button" class="restart-button">Restart Test</button>
+        
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Test Complete!</h2>
+                <p>WPM: <span id="final-wpm"></span></p>
+                <p>Errors: <span id="final-errors"></span></p>
+                <button id="modal-restart-button">Try Again</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
